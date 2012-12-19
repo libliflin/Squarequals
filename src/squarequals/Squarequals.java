@@ -7,8 +7,13 @@ package squarequals;
 import java.math.BigInteger;
 
 /**
+ * 
+ * Pronounced Square-Qual 
  *
  * if x is a squarequal then x * 10^n for any int in is a squarequal
+ * 
+ * if x is a squarequal then all right substrings of x are squarequals
+ *      You know, deal with leading zeros too yeah?
  * 
  * 
  * 
@@ -43,13 +48,14 @@ public class Squarequals {
         }else{
 //            System.out.println(String.format("%"+depth+"d", toExtend).replace(" ", "0"));
         }
-        extend(toExtend, depth+1);
         if(depth == numDigits(toExtend)){
             System.out.println("squarequal: " + String.format("%"+maxDepth+"d", toExtend));
         }
+        // leading zeros
+        extend(toExtend, depth+1);
         int numDigits = depth;//numDigits(toExtend);
-        BigInteger Edepth = BigInteger.TEN.pow(numDigits); // pow
         for(int i = 1; i < 10; i++){
+            BigInteger Edepth = BigInteger.TEN.pow(numDigits); // pow
             BigInteger I = BigInteger.valueOf(i);
             BigInteger possibleExtended = I.multiply(Edepth).add(toExtend);
             BigInteger toCheck = possibleExtended.multiply(possibleExtended).mod(Edepth.multiply(BigInteger.TEN));
