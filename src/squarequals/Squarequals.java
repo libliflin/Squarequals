@@ -10,7 +10,7 @@ import java.math.BigInteger;
  * 
  * Pronounced Square-Qual 
  *
- * if x is a squarequal then x * 10^n for any int in is a squarequal
+ * if x is a squarequal then x * 10^n for any int n is a squarequal
  * 
  * if x is a squarequal then all right substrings of x are squarequals
  *      You know, deal with leading zeros too yeah?
@@ -25,14 +25,11 @@ public class Squarequals {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Squarequals squarequals = new Squarequals();
-        int[] digitsBackward = new int[34];
-        System.out.println(1 % 10);
+//        search();
         int[] singles = {1, 5, 6};
         for(int starter : singles){
             extend(BigInteger.valueOf(starter), 1);
         }
-//        squarequals.search(digitsBackward,0, 0, 0);
     }
     
     public static int numDigits(BigInteger i){
@@ -40,7 +37,7 @@ public class Squarequals {
 //        return 1 + (int)Math.floor(Math.log10(i));
     }
     
-    static int maxDepth = 30;
+    static int maxDepth = 50;
     
     public static  void extend(BigInteger toExtend, int depth){
         if(depth > maxDepth){
@@ -78,9 +75,7 @@ public class Squarequals {
     }
     
     
-    public void search(int[] digitsBackward, int index, int lastCarry, int squared){
-        for(int j = 0; j < index; j++){
-//            lastCarry + 2 * 
+    public static void search(){
             for(int i = 0; i < 10; i ++){
                 int iSquared = i * i;
                 int xbit = iSquared % 10;
@@ -92,7 +87,6 @@ public class Squarequals {
 //                    digitsSoFar.r
                 }
             }
-        }
     }
     
 }
