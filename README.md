@@ -2,6 +2,7 @@ Twitter fun times.
 
 run:
 1
+
     squarequal:                                                  1
     squarequal:                                                  5
     squarequal:                                                 25
@@ -89,4 +90,5 @@ run:
     squarequal:   576576769103890995893380022607743740081787109376
     squarequal:  2576576769103890995893380022607743740081787109376
     squarequal: 42576576769103890995893380022607743740081787109376
+
 BUILD SUCCESSFUL (total time: 0 seconds)
