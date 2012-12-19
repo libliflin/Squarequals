@@ -8,7 +8,6 @@ import java.math.BigInteger;
 
 /**
  *
- * if x is a squarqual then x*x is a squarequal
  * if x is a squarequal then x * 10^n for any int in is a squarequal
  * 
  * 
